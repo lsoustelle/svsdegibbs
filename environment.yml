@@ -1,0 +1,14 @@
+name: svsdegibbs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - cxx-compiler        # portable gcc/clang + linker, sets CXX consistently
+  - eigen                # header-only linear algebra
+  - fftw                 # FFTW3 (headers + libs)
+  - pybind11
+  - numpy
+  - nibabel
+  - tqdm
+  - llvm-openmp           # only actually used on macOS; harmless elsewhere
