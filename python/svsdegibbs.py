@@ -60,7 +60,7 @@ def _parse_axes(s):
 
 def build_parser():
     p = argparse.ArgumentParser(description="Remove Gibbs ringing artefacts (standalone port of MRtrix3's mrdegibbs).")
-    p.add_argument("input", help="input NIfTI image (3D volume, or 4D volume+REP/DWI stack)")
+    p.add_argument("input", help="input NIfTI image (3D volume or 4D volume ([2D-multislice/3D]+REP/DWI stack)")
     p.add_argument("output", help="output NIfTI image")
     p.add_argument("-dimensionality",type=int,choices=[2, 3],default=2,help="2 = slice-wise 2D method (default), 3 = volume-wise 3D method")
     p.add_argument("-axes",type=_parse_axes,default=[0, 1],metavar="list",help="slice axes for 2D mode, comma-separated (default: 0,1)")
